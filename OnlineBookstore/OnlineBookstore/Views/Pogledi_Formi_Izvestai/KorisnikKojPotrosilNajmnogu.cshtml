@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OnlineBookstore.Models.korisnik_potrosil_najmnogu>
+
+@{
+    ViewBag.Title = "KorisnikKojPotrosilNajmnogu";
+}
+
+<h2>KorisnikKojPotrosilNajmnogu</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.korisnik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vkupno)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.korisnik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vkupno)
+        </td>
+    </tr>
+}
+
+</table>

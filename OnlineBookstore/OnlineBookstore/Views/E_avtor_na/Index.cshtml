@@ -1,0 +1,34 @@
+﻿@model IEnumerable<OnlineBookstore.Models.KnigaAvtor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Knigi i Nivnite avtori</h2>
+<!--
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>-->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.naslov)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avtor)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.naslov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.avtor)
+            </td>
+        </tr>
+    }
+
+</table>

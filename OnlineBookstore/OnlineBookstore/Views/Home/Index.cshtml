@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Online Bookstore</h1>
+    <p class="lead">Проект по предметот Бази на Податоци</p>
+    <p class="lead">Фјола Фетаји 181031</p>
+</div>
+
+<div class="row">
+    @Html.ActionLink("Табелата Примерок Книга", "Index", "Primerok_kniga")
+    <br /><br />
+    @Html.ActionLink("Табелата Книга", "Index", "Kniga")
+    <br /><br />
+    @Html.ActionLink("Табелата Човек", "Index", "Coveks")
+    <br /><br />
+    @Html.ActionLink("Табелата Автор", "IndexDetailed", "Avtors")
+    <br /><br />
+    @Html.ActionLink("Табелата Корисник", "IndexDetailed", "Korisniks")
+    <br /><br />
+    @Html.ActionLink("Табелата Е Автор На", "Index", "E_avtor_na")
+    <br /><br />
+    @Html.ActionLink("Табелата Магацин", "Index", "Magacins")
+    <br /><br />
+    @Html.ActionLink("Табелата Купувачка Кошничка", "Index", "Kupuvacka_Kosnica")
+    <br /><br />
+    @Html.ActionLink("Погледи, Форми и Извештаи", "Index", "Pogledi_Formi_Izvestai")
+</div>

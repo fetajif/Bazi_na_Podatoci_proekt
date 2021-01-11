@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OnlineBookstore.Models.covek>
+
+@{
+    ViewBag.Title = "IndexDetailed";
+}
+
+<h2>IndexDetailed</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prezime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.embg }) |
+            @Html.ActionLink("Details", "Details", new { id=item.embg }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.embg })
+        </td>
+    </tr>
+}
+
+</table>

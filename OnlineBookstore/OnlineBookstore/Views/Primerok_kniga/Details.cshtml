@@ -1,0 +1,50 @@
+﻿@model OnlineBookstore.Models.primerok_kniga
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>primerok_kniga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kosnicka_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kosnicka_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.magacin_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.magacin_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.primerok_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

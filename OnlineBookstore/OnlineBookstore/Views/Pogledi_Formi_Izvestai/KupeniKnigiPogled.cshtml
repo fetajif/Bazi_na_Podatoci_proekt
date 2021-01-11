@@ -1,0 +1,87 @@
+﻿@model IEnumerable<OnlineBookstore.Models.pogled_kupeni_knigi>
+
+@{
+    ViewBag.Title = "KupeniKnigiPogled";
+}
+
+<h2>KupeniKnigiPogled</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.naslov)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.godinaizdavanje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kategorija)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.embg_avtor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avtor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresa_avtor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_korisnik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.korisnik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresa_korisnik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.naslov)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.godinaizdavanje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kategorija)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.embg_avtor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avtor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresa_avtor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_korisnik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.korisnik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresa_korisnik)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.isbn }) |
+            @Html.ActionLink("Details", "Details", new { id=item.isbn }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.isbn })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,49 @@
+﻿@model OnlineBookstore.Models.smestiZaliha
+
+@{
+    ViewBag.Title = "SmestiZaliha";
+}
+
+<h2>Smesti Zaliha</h2>
+<br />
+<br />
+
+@Html.ActionLink("Додади Книга", "Create", "Kniga")
+<br />
+<br />
+@Html.ActionLink("Додади примерок на книга", "Create", "Korisniks")
+<br /><br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.magacin_id, "magacin_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("magacin_id", new SelectList(Model.magacini, "magacin_id", "adresa"), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.magacin_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.primerok_id, "primerok_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("primerok_id", new SelectList(Model.primeroci, "primerok_id", "isbn"), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.primerok_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Смести" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

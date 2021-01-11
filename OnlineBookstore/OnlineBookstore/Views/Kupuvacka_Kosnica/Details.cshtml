@@ -1,0 +1,29 @@
+﻿@model OnlineBookstore.Models.kupuvacka_kosnica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>kupuvacka_kosnica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.embg_korisnik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.embg_korisnik)
+        </dd>
+
+        <dd>
+            @Html.ActionLink("Details about korisnik", "Details", "Korisniks", new { id = Model.embg_korisnik }, null)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.kosnicka_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

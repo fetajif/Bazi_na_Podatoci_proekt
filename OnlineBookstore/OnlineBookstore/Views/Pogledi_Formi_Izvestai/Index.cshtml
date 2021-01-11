@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Погледи, Форми и Извештаи</h2>
+
+<h3>Погледи</h3>
+<ul>
+    <li>
+        @Html.ActionLink("Приказ на сите книги и нивните автори", "KnigaAvtoriPogled")
+    </li>
+    <li>
+        @Html.ActionLink("Приказ на сите купени книги и нивните купувачи", "KupeniKnigiPogled")
+    </li>
+</ul>
+
+<h3>Форми</h3>
+<ul>
+    <li>
+        @Html.ActionLink("Купи Книга", "KupiKniga")
+    </li>
+    <li>
+        @Html.ActionLink("Додадавање на книга во магацин", "SmestiZaliha")
+    </li>
+</ul>
+
+<h3>Извештаи</h3>
+<ul>
+    <li>
+        @Html.ActionLink("Вкупно колку потрошиле корисниците", "VkupnoPotrosilKorisnik")
+    </li>
+    <li>
+        @Html.ActionLink("Најпродадена книга", "NajprodadenaKniga")
+    </li>
+    <li>
+        @Html.ActionLink("Корисникот кој потрошил најмногу од сите други корисници", "KorisnikKojPotrosilNajmnogu")
+    </li>
+</ul>
+
